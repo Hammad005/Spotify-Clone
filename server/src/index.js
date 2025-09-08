@@ -3,6 +3,7 @@ import 'dotenv/config';
 import { clerkMiddleware } from '@clerk/express'
 import fileUplaod from "express-fileupload";
 import path from "path";
+import cors from "cors";
 
 import userRoutes from "./routes/userRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
@@ -27,7 +28,12 @@ app.use(fileUplaod({
     limits: {
         fileSize: 10 * 1024 * 1024 // 10MB limit
     },
-}))
+}));
+app.use(cors({
+    origin: process.env.FRONTEND_URL,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
+}));
 
 
 app.use('/api/auth', authRoutes)
