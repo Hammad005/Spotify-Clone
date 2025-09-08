@@ -9,19 +9,31 @@ const songSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    imageUrl: {
-        type: String,
-        required: true
+    image: {
+        imageId: {
+            type: String,
+            required: true
+        },
+        imageUrl: {
+            type: String,
+            required: true
+        },
     },
-    audioUrl: {
-        type: String,
-        required: true
+    audio: {
+        audioId: {
+            type: String,
+            required: true
+        },
+        audioUrl: {
+            type: String,
+            required: true
+        }
     },
     duration: {
         type: Number,
         required: true
     },
-    album: {
+    albumId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Album',
     }

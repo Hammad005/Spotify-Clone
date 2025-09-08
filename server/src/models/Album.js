@@ -9,9 +9,15 @@ const albumSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    imageUrl: {
-        type: String,
-        required: true
+    image: {
+        imageId: {
+            type: String,
+            required: true
+        },
+        imageUrl: {
+            type: String,
+            required: true
+        },
     },
     releaseYear: {
         type: Number,
