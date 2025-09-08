@@ -6,6 +6,7 @@ import adminRoutes from "./routes/adminRoutes.js";
 import songRoutes from "./routes/songRoutes.js";
 import statRoutes from "./routes/statRoutes.js";
 import albumRoutes from "./routes/albumRoutes.js";
+import connectDb from "./config/connectDb.js";
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -22,4 +23,5 @@ app.use('/api/stats', statRoutes)
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
+    connectDb();
 })
