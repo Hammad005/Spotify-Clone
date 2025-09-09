@@ -3,6 +3,7 @@ import PlaylistSkeleton from "@/components/skeletons/PlaylistSkeleton"
 import { buttonVariants } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { cn } from "@/lib/utils"
+import { useMusicStore } from "@/store/useMusicStore"
 import { SignedIn } from "@clerk/clerk-react"
 import { HomeIcon, Library, MessageCircle } from "lucide-react"
 import { Link } from "react-router-dom"
@@ -10,6 +11,7 @@ import { Link } from "react-router-dom"
 const LeftSidebar = () => {
     const isLoading = false;
 
+    const {albums, songs, fetchAlbums} = useMusicStore();
 
     return (
         <div className="h-full flex flex-col gap-2">
