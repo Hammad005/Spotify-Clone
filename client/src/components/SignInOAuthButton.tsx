@@ -15,7 +15,8 @@ const SignInOAuthButton = () => {
         });
     }
   return (
-    <Button onClick={oAuth} variant={'secondary'} className="w-full text-white border-zinc-200 h-11">
+    <Button onClick={oAuth} variant={'secondary'} className="w-full text-white border-zinc-200 h-11 cursor-pointer">
+        <img src="/public/googleLogo.png" alt="google" className="w-4 h-4" />
         Continue with Google
     </Button>
   )
