@@ -1,4 +1,5 @@
-import PlaylistSkeleton from "@/components/skeletons/PlayListSkeleton"
+
+import PlaylistSkeleton from "@/components/skeletons/PlaylistSkeleton"
 import { buttonVariants } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { cn } from "@/lib/utils"
@@ -8,6 +9,8 @@ import { Link } from "react-router-dom"
 
 const LeftSidebar = () => {
     const isLoading = false;
+
+
     return (
         <div className="h-full flex flex-col gap-2">
             <div className="rounded-lg bg-zinc-900 p-4">
