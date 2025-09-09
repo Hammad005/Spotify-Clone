@@ -11,7 +11,7 @@ const updateApiToken = (token: string | null) => {
 
 }
 const AuthProvider = ({children}: {children: React.ReactNode}) => {
-    const { getToken, userId } = useAuth();
+    const { getToken } = useAuth();
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -36,7 +36,9 @@ const AuthProvider = ({children}: {children: React.ReactNode}) => {
         return <div className="h-screen w-full flex items-center justify-center"><Loader2 className="animate-spin size-8 text-emerald-500" /></div>;
     }
     return (
-        <>{children}</>
+        <>
+            {children}
+        </>
     )
 }
 
